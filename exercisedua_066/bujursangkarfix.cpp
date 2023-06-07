@@ -63,23 +63,38 @@ public:
 int main() {
     bidangDatar* bd; // pointer objek polymorphic
     
-    // Membuat objek Lingkaran
-    cout << "Lingkaran dibuat" << endl;
-    bd = new Lingkaran();
-    bd->input();
-    int r = bd->getX();
-    cout << "Luas Lingkaran = " << bd->Luas(r) << endl;
-    cout << "Keliling Lingkaran = " << bd->Keliling(r) << endl;
-    delete bd;
+// Membuat objek Lingkaran
+cout << "Lingkaran dibuat" << endl;
+
+bd = new Lingkaran();
+
+// Memanggil metode 'input()' dari objek 'bd'
+bd->input();
+
+// Mendapatkan nilai jari-jari lingkaran dan disimpan dalam variabel 'r'
+int r = bd->getX();
+cout << "Luas Lingkaran = " << bd->Luas(r) << endl;
+cout << "Keliling Lingkaran = " << bd->Keliling(r) << endl;
+
+delete bd;
+
     
     // Membuat objek Bujursangkar
-    cout << "Bujursangkar dibuat" << endl;
-    bd = new Bujursangkar();
-    bd->input();
-    int sisi = bd->getX();
-    cout << "Luas Bujursangkar = " << bd->Luas(sisi) << endl;
-    cout << "Keliling Bujursangkar = " << bd->Keliling(sisi) << endl;
-    delete bd;
-    
-    return 0;
+cout << "Bujursangkar dibuat" << endl;
+
+// objek baru dengan nama 'bd' instance kelas Bujursangkar
+bd = new Bujursangkar();
+
+// Memanggil metode 'input()'objek 'bd' untuk memasukkan nilai sisi bujursangkar
+bd->input();
+
+// Mendapatkan nilai sisi bujursangkar dan menyimpannya dalam variabel 'sisi'
+int sisi = bd->getX();
+cout << "Luas Bujursangkar = " << bd->Luas(sisi) << endl;
+cout << "Keliling Bujursangkar = " << bd->Keliling(sisi) << endl;
+
+delete bd;
+
+return 0;
+
 }
